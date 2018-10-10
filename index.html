@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+
+<div id="scene" style="">
+	<div class="back" data-depth="1">
+		<h2>front end web developer</h2>
+		<div class="brain"></div>
+	</div>
+	<div class="front" data-depth="0.4">
+		<h1>luka kupunia</h1>
+		<div class="brain"></div>
+	</div>
+</div>
+<div class="section">
+	<div class="body">
+		<div class="content">
+			<div class="inner">
+				<h1><span>Smile</span> in the mirror...</h1>
+				<div class="stick2"></div>
+				<div class="stick"></div>
+				<div class="project_body">
+					
+					<div class="shadow"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.easeScroll.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/parallaxx.min.js"></script>
+<!-- <script src="js/typed.js"></script> -->
+<script src="js/typed.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript">
+	
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+parallaxInstance.friction(0.005, 0.005);
+
+
+$("html").easeScroll({
+  frameRate: 60,
+  animationTime: 1000,
+  stepSize: 120,
+  pulseAlgorithm: 1,
+  pulseScale: 8,
+  pulseNormalize: 1,
+  accelerationDelta: 20,
+  accelerationMax: 1,
+  keyboardSupport: true,
+  arrowScroll: 10,
+  touchpadSupport: true,
+  fixedBackground: true
+});
+
+$("html").on('mousewheel', function(e){
+  $('#scene').slideUp(1200);
+  // setTimeout(function() {
+  	$('.section').addClass('active');
+  // }, 1000);
+})
+
+
+</script>
+</body>
+</html>
